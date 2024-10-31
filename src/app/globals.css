@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 768px) {
+  /* .css-dev-only-do-not-override-ni1kz0 {
+    padding: 0 !important;
+  } */
+  :where(.css-dev-only-do-not-override-ni1kz0).ant-btn > span {
+    padding: 0 20px;
+  }
+  :where(.css-dev-only-do-not-override-ni1kz0).ant-input-affix-wrapper {
+    padding: 10px;
+  }
+}
+.text-white * {
+  color: #ffffff !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  max-width: 100% !important;
+  width: auto;
+}
