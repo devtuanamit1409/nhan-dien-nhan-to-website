@@ -64,12 +64,15 @@ const QuestionOption = ({ questionData, questionsMain }) => {
 
   const handleInfoSubmit = async () => {
     const mbti = localStorage.getItem("mbti");
-
+    const birthDatePattern = /^\d{2}-\d{2}-\d{4}$/;
     if (!mbti || !phone || !birthDate || !address) {
       message.error("Vui lòng nhập đầy đủ thông tin.");
       return;
     }
-
+    if (!birthDatePattern.test(birthDate)) {
+      message.error("Ngày sinh phải có định dạng dd-mm-yyyy.");
+      return;
+    }
     const formData = {
       data: {
         type: mbti,
