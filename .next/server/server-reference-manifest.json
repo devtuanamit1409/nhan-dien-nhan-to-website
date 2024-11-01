@@ -18,13 +18,67 @@
     },
     "f252422b9d6c6173a78812f2af45b8816a37916f": {
       "workers": {
-        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
+        "app/bai-trac-nghiem-mbti/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-mbti%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
+        "app/bai-trac-nghiem-50-cau/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-50-cau%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
+        "app/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/page": "rsc"
+        "app/page": "rsc",
+        "app/bai-trac-nghiem-mbti/page": "rsc",
+        "app/bai-trac-nghiem-50-cau/page": "rsc",
+        "app/[slug]/page": "rsc"
+      }
+    },
+    "6c8cb164183da554b0ca0285335b5182f055dd5f": {
+      "workers": {
+        "app/bai-trac-nghiem-mbti/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-mbti%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/bai-trac-nghiem-mbti/page": "rsc"
+      }
+    },
+    "8d3994dc5bb4d18ee21316525b83b0176d1fdc34": {
+      "workers": {
+        "app/bai-trac-nghiem-mbti/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-mbti%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/bai-trac-nghiem-mbti/page": "rsc"
+      }
+    },
+    "16d0874d89e076ef3a02c43ad3cc9f33d2841c75": {
+      "workers": {
+        "app/bai-trac-nghiem-50-cau/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-50-cau%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/bai-trac-nghiem-50-cau/page": "rsc"
+      }
+    },
+    "a6568fd1838aaa22ee4ec044ddc3dcc86d8ecb39": {
+      "workers": {
+        "app/bai-trac-nghiem-50-cau/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fbai-trac-nghiem-50-cau%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/bai-trac-nghiem-50-cau/page": "rsc"
+      }
+    },
+    "26363b728807639923470a9b09be1ed070f15118": {
+      "workers": {
+        "app/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/[slug]/page": "rsc"
+      }
+    },
+    "465b68bbfd3c8fb362895d3c0751202d4df0629a": {
+      "workers": {
+        "app/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/[slug]/page": "rsc"
       }
     }
   },
   "edge": {},
-  "encryptionKey": "NwAHYRHaqjw9AKR/t2QHmN43Hx1uALW9fhu8Lr98fX0="
+  "encryptionKey": "+C/85F8Bfkbyj+8t/Zdp0uhZWawxQEhitjAJ1L5yp5I="
 }

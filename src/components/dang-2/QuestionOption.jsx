@@ -7,6 +7,7 @@ import {
   PhoneOutlined,
   HomeOutlined,
   CalendarOutlined,
+  SolutionOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 const { Title, Text } = Typography;
@@ -19,6 +20,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
   const [birthDate, setBirthDate] = useState("");
   const [address, setAddress] = useState("");
   const [resultType, setResultType] = useState(null);
+  const [position, setPosition] = useState("");
   const optionLabels = ["A", "B", "C", "D", "E", "F", "G"];
   const token = process.env.NEXT_PUBLIC_TOKEN_DEV;
 
@@ -79,6 +81,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
         phone,
         birthDate,
         address,
+        position,
       },
     };
 
@@ -244,6 +247,17 @@ const QuestionOption = ({ questionData, questionsMain }) => {
             placeholder="Địa chỉ"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "10px",
+              borderRadius: "8px",
+            }}
+          />
+          <Input
+            prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
+            placeholder="Vị trí ứng tuyển"
+            value={position}
+            onChange={(e) => setPosition(e.target.value)}
             style={{
               marginBottom: "10px",
               padding: "10px",

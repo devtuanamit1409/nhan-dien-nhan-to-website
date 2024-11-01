@@ -10,6 +10,21 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/bai-trac-nghiem-mbti/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/bai-trac-nghiem-mbti/page.js"
+    ],
+    "/bai-trac-nghiem-50-cau/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/bai-trac-nghiem-50-cau/page.js"
+    ],
+    "/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[slug]/page.js"
     ]
   }
 }

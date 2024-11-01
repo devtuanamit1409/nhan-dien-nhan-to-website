@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/bai-trac-nghiem-mbti/page": "app/bai-trac-nghiem-mbti/page.js",
+  "/bai-trac-nghiem-50-cau/page": "app/bai-trac-nghiem-50-cau/page.js",
+  "/[slug]/page": "app/[slug]/page.js"
 }

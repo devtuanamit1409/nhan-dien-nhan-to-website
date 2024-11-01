@@ -15,6 +15,7 @@ import {
   PhoneOutlined,
   HomeOutlined,
   CalendarOutlined,
+  SolutionOutlined,
 } from "@ant-design/icons";
 import { ENDPOINT } from "../../enums/endpoint.enum";
 import Link from "next/link";
@@ -28,6 +29,7 @@ const Question = ({ question }) => {
   const [birthDate, setBirthDate] = useState("");
   const [address, setAddress] = useState("");
   const [answers, setAnswers] = useState({});
+  const [position, setPosition] = useState("");
   const [resultType, setResultType] = useState(null);
   const [resetKey, setResetKey] = useState(0);
   const token = process.env.NEXT_PUBLIC_TOKEN_DEV;
@@ -56,6 +58,7 @@ const Question = ({ question }) => {
         phone,
         birthDate, // Trường này bây giờ là chuỗi văn bản nhập tay
         address,
+        position,
       },
     };
 
@@ -82,6 +85,7 @@ const Question = ({ question }) => {
       setPhone("");
       setBirthDate("");
       setAddress("");
+      setPosition("");
       setResetKey(resetKey + 1);
       localStorage.removeItem("mbti");
       setIsModalVisible(false);
@@ -307,6 +311,17 @@ const Question = ({ question }) => {
             placeholder="Địa chỉ"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "10px",
+              borderRadius: "8px",
+            }}
+          />
+          <Input
+            prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
+            placeholder="Vị trí ứng tuyển"
+            value={position}
+            onChange={(e) => setPosition(e.target.value)}
             style={{
               marginBottom: "10px",
               padding: "10px",
