@@ -1,0 +1,30 @@
+{
+  "node": {
+    "36fc266f9efbf1eaa01633332fb3dde1301f1b30": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "c25bf2281c4f6a6450791b64d860d7d4c27f427b": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "f252422b9d6c6173a78812f2af45b8816a37916f": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "NwAHYRHaqjw9AKR/t2QHmN43Hx1uALW9fhu8Lr98fX0="
+}

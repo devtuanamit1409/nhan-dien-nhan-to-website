@@ -274,7 +274,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
             Đóng
           </Button>,
         ]}
-        bodyStyle={{
+        style={{
           padding: "30px",
           textAlign: "center",
           backgroundColor: "#f0f8ff",

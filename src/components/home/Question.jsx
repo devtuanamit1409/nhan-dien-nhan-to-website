@@ -269,7 +269,7 @@ const Question = ({ question }) => {
             Gửi
           </Button>,
         ]}
-        bodyStyle={{
+        style={{
           padding: "20px",
           textAlign: "center",
           backgroundColor: "#f9f9f9",
