@@ -24,7 +24,13 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/Header/index.jsx",
-    "src/components/layouts/Header.jsx"
-, "src/services/api.service.js", "src/interceptors/response.interceptor.js", "src/interceptors/request.interceptor.js"  ],
+    "src/components/layouts/Header.jsx",
+    "src/services/api.service.js",
+    "src/interceptors/response.interceptor.js",
+    "src/interceptors/request.interceptor.js",
+    "src/i18n/routing.js",
+    "src/middleware.js",
+    "src/i18n/request.js"
+  ],
   "exclude": ["node_modules"]
 }

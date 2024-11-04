@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_rsc_messages_en_json";
+exports.ids = ["_rsc_messages_en_json"];
+exports.modules = {
+
+/***/ "(rsc)/./messages/en.json":
+/*!**************************!*\
+  !*** ./messages/en.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"HomePage":{"title":"Welcome","about":"Go to the about page","title_box_right":"16 MBTI personality groups","button_send":"Submit a reply","lang":"Language"},"Header":{"trac_nghiem_50_cau":"50 Question Test","trac_nghiem_nhanh":"MBTI Test","nhom_tinh_cach":"8 Personality Traits","lien_he":"Contact"},"Questions":{"warning_submit":"Please answer all questions.","error_submit":"An error occurred while submitting your answers.","error_submit_2":"Type not found for the answers.","error_submit_3":"Unable to submit answers. Please try again later.","error_submit_4":"Unable to submit applicant information. Please try again later.","error_submit_5":"Please fill in all required information.","error_submit_6":"Date of birth must be in the format dd-mm-yyyy.","success":"Applicant information has been submitted successfully!","fill_name":"Enter your full name","send":"Submit","cancle":"Cancel","content_modal":"Please enter your information so we can evaluate better.","phone":"Phone Number","birth":"Date of Birth (DD-MM-YYYY)","address":"Address","position":"Position Applied For","result":"Your Result","close":"Close","resultType":"Your personality type is:","content_detail":"Explore more about your personality and discover additional useful information.","detail_type":"View detailed information about your personality here"},"MBTITest":{"button_send":"Submit Answers","error":"Please select exactly 4 answers.","error_2":"An error occurred while submitting the answers.","success":"MBTI results have been received!","error_3":"No type found for the answer.","error_4":"Unable to submit the answer. Please try again later.","error_5":"Please fill in all required information.","error_6":"The birth date must be in the format dd-mm-yyyy.","error_7":"An error occurred while submitting candidate data.","error_8":"Unable to submit candidate information. Please try again later.","fill_name":"Enter your full name","send":"Submit","cancle":"Cancel","content_modal":"Please enter your information so we can better assess.","phone":"Phone Number","birth":"Date of Birth (DD-MM-YYYY)","address":"Address","position":"Position Applied For","result":"Your Result","close":"Close","resultType":"Your personality type is:","content_detail":"Discover more about your personality type and explore further insights.","detail_type":"View detailed information about your personality type here"}}');
+
+/***/ })
+
+};
+;

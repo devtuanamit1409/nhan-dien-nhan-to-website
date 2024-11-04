@@ -21,8 +21,10 @@ async function fetchData(endpoint) {
 }
 
 // Component Footer để hiển thị thông tin từ API
-const Footer = async () => {
-  const data = await fetchData(`${ENDPOINT.GET_FOOTER}?${searchParams}`);
+const Footer = async ({ locale }) => {
+  const data = await fetchData(
+    `${ENDPOINT.GET_FOOTER}?${searchParams}&locale=${locale}`
+  );
   const dataFooter = data?.data || [];
 
   return (

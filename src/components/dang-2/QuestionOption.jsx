@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 const { Title, Text } = Typography;
+import { useTranslations } from "next-intl";
 
 const QuestionOption = ({ questionData, questionsMain }) => {
   const [selectedOption, setSelectedOption] = useState({});
@@ -23,6 +24,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
   const [position, setPosition] = useState("");
   const optionLabels = ["A", "B", "C", "D", "E", "F", "G"];
   const token = process.env.NEXT_PUBLIC_TOKEN_DEV;
+  const t = useTranslations("MBTITest");
 
   const handleSelectOption = (questionId, optionId) => {
     setSelectedOption({ ...selectedOption, [questionId]: optionId });
@@ -32,7 +34,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
     const answers = Object.values(selectedOption);
 
     if (answers.length !== 4) {
-      message.error("Vui lòng chọn đúng 4 đáp án.");
+      message.error(t("error"));
       return;
     }
 
@@ -47,20 +49,20 @@ const QuestionOption = ({ questionData, questionsMain }) => {
       });
 
       if (!response.ok) {
-        throw new Error("Có lỗi xảy ra khi gửi câu trả lời.");
+        throw new Error(t("error_2"));
       }
 
       const result = await response.json();
       if (result?.mbti) {
         localStorage.setItem("mbti", result.mbti);
         setIsInfoModalVisible(true);
-        message.success("Đã nhận được kết quả MBTI!");
+        message.success(t("success"));
       } else {
-        message.error("Không tìm thấy type cho câu trả lời.");
+        message.error(t("error_3"));
       }
     } catch (error) {
       console.error("Error submitting answers:", error);
-      message.error("Không thể gửi câu trả lời. Vui lòng thử lại sau.");
+      message.error(t("error_4"));
     }
   };
 
@@ -68,11 +70,11 @@ const QuestionOption = ({ questionData, questionsMain }) => {
     const mbti = localStorage.getItem("mbti");
     const birthDatePattern = /^\d{2}-\d{2}-\d{4}$/;
     if (!mbti || !phone || !birthDate || !address) {
-      message.error("Vui lòng nhập đầy đủ thông tin.");
+      message.error(t("error_5"));
       return;
     }
     if (!birthDatePattern.test(birthDate)) {
-      message.error("Ngày sinh phải có định dạng dd-mm-yyyy.");
+      message.error(t("error_6"));
       return;
     }
     const formData = {
@@ -95,8 +97,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok)
-        throw new Error("Có lỗi xảy ra khi gửi dữ liệu ứng viên.");
+      if (!response.ok) throw new Error(t("error_7"));
 
       const result = await response.json();
       setResultType(result.data.attributes.type);
@@ -109,7 +110,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
       setIsResultModalVisible(true);
     } catch (error) {
       console.error(error);
-      message.error("Không thể gửi thông tin ứng viên. Vui lòng thử lại sau.");
+      message.error("errpr_8");
     }
   };
 
@@ -185,20 +186,20 @@ const QuestionOption = ({ questionData, questionsMain }) => {
           }}
           onClick={handleSubmit}
         >
-          Gửi câu trả lời
+          {t("button_send")}
         </Button>
       </div>
 
       <Modal
-        title="Nhập thông tin của bạn"
+        title={t("fill_name")}
         open={isInfoModalVisible}
         onOk={handleInfoSubmit}
         onCancel={handleCancel}
-        okText="Gửi"
-        cancelText="Hủy"
+        okText={t("send")}
+        cancelText={t("cancle")}
         footer={[
           <Button key="back" onClick={handleCancel}>
-            Hủy
+            {t("cancle")}
           </Button>,
           <Button
             key="submit"
@@ -206,7 +207,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
             style={{ backgroundColor: "#52c41a", borderColor: "#52c41a" }}
             onClick={handleInfoSubmit}
           >
-            Gửi
+            {t("send")}
           </Button>,
         ]}
         style={{
@@ -217,12 +218,12 @@ const QuestionOption = ({ questionData, questionsMain }) => {
         }}
       >
         <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
-          Vui lòng nhập thông tin để chúng tôi có thể đánh giá tốt hơn.
+          {t("content_modal")}
         </p>
         <div style={{ marginBottom: "20px", textAlign: "left" }}>
           <Input
             prefix={<PhoneOutlined style={{ color: "#52c41a" }} />}
-            placeholder="Số điện thoại"
+            placeholder={t("phone")}
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             style={{
@@ -233,7 +234,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
           />
           <Input
             prefix={<CalendarOutlined style={{ color: "#52c41a" }} />}
-            placeholder="Ngày sinh (DD-MM-YYYY)"
+            placeholder={t("birth")}
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
             style={{
@@ -244,7 +245,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
           />
           <Input
             prefix={<HomeOutlined style={{ color: "#52c41a" }} />}
-            placeholder="Địa chỉ"
+            placeholder={t("address")}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             style={{
@@ -255,7 +256,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
           />
           <Input
             prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
-            placeholder="Vị trí ứng tuyển"
+            placeholder={t("position")}
             value={position}
             onChange={(e) => setPosition(e.target.value)}
             style={{
@@ -269,10 +270,10 @@ const QuestionOption = ({ questionData, questionsMain }) => {
 
       {/* Modal kết quả */}
       <Modal
-        title="Kết quả của bạn"
+        title={t("result")}
         open={isResultModalVisible}
         onOk={() => setIsResultModalVisible(false)}
-        okText="Đóng"
+        okText={t("close")}
         centered
         footer={[
           <Button
@@ -285,7 +286,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
               fontWeight: "bold",
             }}
           >
-            Đóng
+            {t("close")}
           </Button>,
         ]}
         style={{
@@ -297,12 +298,11 @@ const QuestionOption = ({ questionData, questionsMain }) => {
       >
         <div style={{ marginBottom: "20px" }}>
           <Title level={4} style={{ color: "#52c41a" }}>
-            Type tính cách của bạn là: <strong>{resultType}</strong>
+            {t("resultType")} <strong>{resultType}</strong>
           </Title>
         </div>
         <p style={{ fontSize: "16px", color: "#333", marginBottom: "20px" }}>
-          Khám phá thêm về tính cách của bạn và tìm hiểu thêm các thông tin hữu
-          ích.
+          {t("content_detail")}
         </p>
         <Link href={`/${resultType?.toLowerCase()}`} passHref>
           <Button
@@ -314,7 +314,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
               textDecoration: "underline",
             }}
           >
-            Xem chi tiết tính cách của bạn tại đây
+            {t("detail_type")}
           </Button>
         </Link>
       </Modal>

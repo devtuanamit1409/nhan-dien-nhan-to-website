@@ -1,25 +1,33 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { MenuOutlined, CloseOutlined } from "@ant-design/icons"; // Sử dụng icon từ Ant Design cho nút hamburger và nút close
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
+import MobileLanguageSwitcher from "./MobileLanguageSwitcher";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false); // Quản lý trạng thái sidebar
+const Header = ({ locale }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("Header"); // Sử dụng key "Header" để lấy các bản dịch từ JSON
+  const currentLocale = useLocale(); // Lấy ngôn ngữ hiện tại
+
+  // Sử dụng bản dịch từ JSON cho menuItems
   const menuItems = [
-    { title: "Bài Trắc Nghiệm 50 Câu", link: "/bai-trac-nghiem-50-cau" },
-    { title: "Bài Trắc Nghiệm MBTI", link: "/bai-trac-nghiem-mbti" },
-    { title: "8 Đặc Điểm Tính Cách", link: "#footer" },
-    { title: "Liên Hệ", link: "/lien-he" },
+    { title: t("trac_nghiem_50_cau"), link: "/50-question-test" },
+    { title: t("trac_nghiem_nhanh"), link: "/mbti-test" },
+    { title: t("nhom_tinh_cach"), link: "#footer" },
+    { title: t("lien_he"), link: "/contact" },
   ];
 
   return (
-    <div className="bg-gray-100 py-4 shadow-lg  sticky top-0 z-50">
+    <div className="bg-gray-100 py-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-0">
         {/* Logo */}
-        <Link href="/">
+        <Link href={`/${currentLocale}`} locale={currentLocale}>
           <Image
-            src="/logo.png"
+            src={locale === "vi" ? "/logo.png" : "/logo-en.png"}
             alt="Logo"
             width={300}
             height={300}
@@ -47,12 +55,14 @@ const Header = () => {
           {menuItems.map((item) => (
             <Link
               key={item.title}
-              href={item.link}
+              href={`/${currentLocale}${item.link}`} // Đảm bảo đường dẫn theo locale
+              locale={currentLocale} // Đặt locale cho từng link
               className="text-gray-700 hover:text-blue-500 font-medium text-lg"
             >
               {item.title}
             </Link>
           ))}
+          <LanguageSwitcher />
         </div>
       </div>
 
@@ -64,15 +74,19 @@ const Header = () => {
       >
         <div className="flex flex-col mt-16 space-y-6 pl-6">
           {menuItems.map((item) => (
-            <a
+            <Link
               key={item.title}
-              href={item.link}
+              href={`/${currentLocale}${item.link}`} // Đảm bảo đường dẫn theo locale
+              locale={currentLocale} // Đặt locale cho từng link
               className="text-gray-700 hover:text-blue-500 font-medium text-lg"
-              onClick={() => setIsOpen(false)} // Đóng sidebar sau khi chọn
+              onClick={() => setIsOpen(false)}
             >
               {item.title}
-            </a>
+            </Link>
           ))}
+          <div className="mt-8">
+            <MobileLanguageSwitcher />
+          </div>
         </div>
       </div>
 
@@ -80,7 +94,7 @@ const Header = () => {
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={() => setIsOpen(false)} // Đóng sidebar khi nhấn vào overlay
+          onClick={() => setIsOpen(false)}
         ></div>
       )}
     </div>
