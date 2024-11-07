@@ -5,6 +5,7 @@ import { apiService } from "../../../services/api.service";
 import QuestionOption from "../../../components/dang-2/QuestionOption";
 import HeaderBanner from "../../../components/dang-2/HeaderBanner";
 import BoxContentRight from "../../../components/home/BoxContentRight";
+import { getTranslations } from "next-intl/server";
 
 const searchData = {
   populate: ["seo.thumbnail", "backgroundImage"].toString(),
@@ -89,6 +90,7 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 const page = async ({ params: { locale } }) => {
+  const t = await getTranslations("HomePage");
   const data = await fetchData(
     `${ENDPOINT.GET_CAU_HOI_DANG_2}?${searchParamsQuestion}&locale=${locale}`
   );
@@ -101,6 +103,7 @@ const page = async ({ params: { locale } }) => {
     `${ENDPOINT.GET_TINH_CACH}?locale=${locale}`
   );
   const list_tinh_cach = tinhCachData.data;
+  const titleBoxRight = t("title_box_right");
   return (
     <>
       <HeaderBanner
@@ -123,7 +126,11 @@ const page = async ({ params: { locale } }) => {
             />
           </div>
           <div className="col-span-12 md:col-span-4">
-            <BoxContentRight list_tinh_cach={list_tinh_cach} />
+            <BoxContentRight
+              title={titleBoxRight}
+              list_tinh_cach={list_tinh_cach}
+              locale={locale}
+            />
           </div>
         </div>
       </div>

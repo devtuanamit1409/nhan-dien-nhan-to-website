@@ -19,11 +19,13 @@
     "f252422b9d6c6173a78812f2af45b8816a37916f": {
       "workers": {
         "app/[locale]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
-        "app/[locale]/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+        "app/[locale]/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
+        "app/[locale]/mbti-test/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fmbti-test%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/[locale]/page": "rsc",
-        "app/[locale]/[slug]/page": "rsc"
+        "app/[locale]/[slug]/page": "rsc",
+        "app/[locale]/mbti-test/page": "rsc"
       }
     },
     "4cbefb673e5c28e44af70024477ae4d3d4dfd544": {
@@ -41,8 +43,24 @@
       "layer": {
         "app/[locale]/[slug]/page": "rsc"
       }
+    },
+    "6e2a3d471de3e34308473f239c3d9a9a1c8046a3": {
+      "workers": {
+        "app/[locale]/mbti-test/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fmbti-test%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/[locale]/mbti-test/page": "rsc"
+      }
+    },
+    "e857d60d4b023e21e1aac40af67b3c21cefba45b": {
+      "workers": {
+        "app/[locale]/mbti-test/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fmbti-test%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/[locale]/mbti-test/page": "rsc"
+      }
     }
   },
   "edge": {},
-  "encryptionKey": "Sr8Ve/7mQJh8WNOzcLgcd0Ka2u9ccjBZ3NMPUvGZuo4="
+  "encryptionKey": "4iQTj0afuw3mz/RqaEX9Erk+vlB4gkRRlr44tkrYUrM="
 }
