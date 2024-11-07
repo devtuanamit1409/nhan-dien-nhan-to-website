@@ -24,17 +24,38 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
         {/* Phần danh sách */}
         <ul className="p-4 bg-white">
           {list_tinh_cach && list_tinh_cach.length > 0 ? (
-            list_tinh_cach.map((item, index) => (
-              <li key={index} className="mb-2">
-                <Link
-                  href={`${locale}/${item.attributes.slug}`}
-                  className="text-blue-600 hover:text-blue-800 font-medium flex justify-between"
-                >
-                  <span className="font-bold">{item.attributes.type}</span>
-                  <span>{item.attributes.type_tieng_viet}</span>
-                </Link>
-              </li>
-            ))
+            list_tinh_cach.map((item, index) => {
+              const slug = item?.attributes?.slug;
+
+              // Chỉ tạo liên kết nếu slug tồn tại
+              if (!slug) {
+                return (
+                  <li key={index} className="mb-2 text-gray-500">
+                    <span className="font-bold">
+                      {item.attributes.type || "N/A"}
+                    </span>
+                    <span>{item.attributes.type_tieng_viet || "N/A"}</span>
+                  </li>
+                );
+              }
+
+              // Tạo href động, loại bỏ vấn đề lặp locale
+              const href = `/${locale}/${slug}`;
+
+              return (
+                <li key={index} className="mb-2">
+                  <Link
+                    href={href}
+                    className="text-blue-600 hover:text-blue-800 font-medium flex justify-between"
+                  >
+                    <span className="font-bold">
+                      {item.attributes.type || "N/A"}
+                    </span>
+                    <span>{item.attributes.type_tieng_viet || "N/A"}</span>
+                  </Link>
+                </li>
+              );
+            })
           ) : (
             <li>Không có dữ liệu nhóm tính cách.</li>
           )}

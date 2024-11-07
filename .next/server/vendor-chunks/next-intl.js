@@ -358,6 +358,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "(rsc)/./node_modules/next-intl/dist/esm/server/react-server/getTranslations.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/next-intl/dist/esm/server/react-server/getTranslations.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ s)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"(rsc)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/rsc/react.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var use_intl_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-intl/core */ \"(rsc)/./node_modules/use-intl/dist/development/core.js\");\n/* harmony import */ var _getConfig_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getConfig.js */ \"(rsc)/./node_modules/next-intl/dist/esm/server/react-server/getConfig.js\");\nvar s=(0,react__WEBPACK_IMPORTED_MODULE_0__.cache)((async function(e){let s,o;\"string\"==typeof e?s=e:e&&(o=e.locale,s=e.namespace);const r=await (0,_getConfig_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(o);return (0,use_intl_core__WEBPACK_IMPORTED_MODULE_2__.createTranslator)({...r,namespace:s,messages:r.messages})}));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC1pbnRsL2Rpc3QvZXNtL3NlcnZlci9yZWFjdC1zZXJ2ZXIvZ2V0VHJhbnNsYXRpb25zLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQTZHLE1BQU0sNENBQUMsb0JBQW9CLFFBQVEscURBQXFELGNBQWMseURBQUMsSUFBSSxPQUFPLCtEQUFDLEVBQUUscUNBQXFDLEVBQUUsR0FBd0IiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uaGFuLWRpZW4tdG8tY2hhdC8uL25vZGVfbW9kdWxlcy9uZXh0LWludGwvZGlzdC9lc20vc2VydmVyL3JlYWN0LXNlcnZlci9nZXRUcmFuc2xhdGlvbnMuanM/OWYxNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnR7Y2FjaGUgYXMgZX1mcm9tXCJyZWFjdFwiO2ltcG9ydHtjcmVhdGVUcmFuc2xhdG9yIGFzIHR9ZnJvbVwidXNlLWludGwvY29yZVwiO2ltcG9ydCBhIGZyb21cIi4vZ2V0Q29uZmlnLmpzXCI7dmFyIHM9ZSgoYXN5bmMgZnVuY3Rpb24oZSl7bGV0IHMsbztcInN0cmluZ1wiPT10eXBlb2YgZT9zPWU6ZSYmKG89ZS5sb2NhbGUscz1lLm5hbWVzcGFjZSk7Y29uc3Qgcj1hd2FpdCBhKG8pO3JldHVybiB0KHsuLi5yLG5hbWVzcGFjZTpzLG1lc3NhZ2VzOnIubWVzc2FnZXN9KX0pKTtleHBvcnR7cyBhcyBkZWZhdWx0fTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next-intl/dist/esm/server/react-server/getTranslations.js\n");
+
+/***/ }),
+
 /***/ "(rsc)/./node_modules/next-intl/dist/esm/shared/NextIntlClientProvider.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/next-intl/dist/esm/shared/NextIntlClientProvider.js ***!

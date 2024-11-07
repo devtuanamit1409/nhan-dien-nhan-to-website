@@ -3,6 +3,7 @@ import React from "react";
 import BoxContentRight from "../../../components/home/BoxContentRight";
 import { ENDPOINT } from "../../../enums/endpoint.enum";
 import { apiService } from "../../../services/api.service";
+import { getTranslations } from "next-intl/server";
 
 const searchData = {
   populate: ["seo.thumbnail"].toString(),
@@ -85,6 +86,7 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
+  const t = await getTranslations("HomePage");
   const { slug } = params;
   const { locale } = params;
   const tinhCachData = await fetchData(
@@ -96,7 +98,7 @@ const Page = async ({ params }) => {
     `${ENDPOINT.GET_TINH_CACH}?filters[slug][$eq]=${slug}&${searchParams}&locale=${locale}`
   );
   const data_detail = detail_tinh_cach ? detail_tinh_cach.data[0] : null;
-
+  const titleBoxRight = t("title_box_right");
   if (!data_detail) {
     return (
       <main className="container mx-auto px-4 md:px-0 py-10">
@@ -133,7 +135,11 @@ const Page = async ({ params }) => {
           </div>
 
           <div className="col-span-12 md:col-span-4">
-            <BoxContentRight list_tinh_cach={list_tinh_cach} />
+            <BoxContentRight
+              title={titleBoxRight}
+              list_tinh_cach={list_tinh_cach}
+              locale={locale}
+            />
           </div>
         </div>
       </main>
