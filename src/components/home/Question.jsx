@@ -23,7 +23,7 @@ import { useTranslations } from "next-intl";
 
 const { Title, Text } = Typography;
 
-const Question = ({ question, button_send, error }) => {
+const Question = ({ question, button_send, error, locale }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResultModalVisible, setIsResultModalVisible] = useState(false);
   const [phone, setPhone] = useState("");
@@ -368,7 +368,7 @@ const Question = ({ question, button_send, error }) => {
         <p style={{ fontSize: "16px", color: "#333", marginBottom: "20px" }}>
           {t("content_detail")}
         </p>
-        <Link href={`/${resultType?.toLowerCase()}`} passHref>
+        <Link href={`/${locale}/${resultType?.toLowerCase()}`} passHref>
           <Button
             type="link"
             style={{
