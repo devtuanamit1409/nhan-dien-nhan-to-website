@@ -22,14 +22,14 @@ const LanguageSwitcher = () => {
 
   const menu = (
     <Menu>
-      <Menu.Item key="vi">
-        <a href={generateLocaleLink("vi")} locale="vi" passHref>
-          <span onClick={() => setCurrentLang("VI")}>Tiếng Việt</span>
-        </a>
-      </Menu.Item>
       <Menu.Item key="en">
         <a href={generateLocaleLink("en")} locale="en" passHref>
           <span onClick={() => setCurrentLang("EN")}>English</span>
+        </a>
+      </Menu.Item>
+      <Menu.Item key="vi">
+        <a href={generateLocaleLink("vi")} locale="vi" passHref>
+          <span onClick={() => setCurrentLang("VI")}>Tiếng Việt</span>
         </a>
       </Menu.Item>
     </Menu>

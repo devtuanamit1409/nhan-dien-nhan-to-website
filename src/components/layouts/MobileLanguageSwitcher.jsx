@@ -23,15 +23,6 @@ const MobileLanguageSwitcher = () => {
     <div className="flex flex-col items-start space-y-2">
       <span className="text-gray-800 font-medium mb-2">{t("lang")}</span>
       <div className="flex space-x-2">
-        <a href={generateLocaleLink("vi")}>
-          <Button
-            type={currentLang === "VI" ? "primary" : "default"}
-            icon={<GlobalOutlined />}
-            onClick={() => setCurrentLang("VI")}
-          >
-            VI
-          </Button>
-        </a>
         <a href={generateLocaleLink("en")}>
           <Button
             type={currentLang === "EN" ? "primary" : "default"}
@@ -39,6 +30,15 @@ const MobileLanguageSwitcher = () => {
             onClick={() => setCurrentLang("EN")}
           >
             EN
+          </Button>
+        </a>
+        <a href={generateLocaleLink("vi")}>
+          <Button
+            type={currentLang === "VI" ? "primary" : "default"}
+            icon={<GlobalOutlined />}
+            onClick={() => setCurrentLang("VI")}
+          >
+            VI
           </Button>
         </a>
       </div>

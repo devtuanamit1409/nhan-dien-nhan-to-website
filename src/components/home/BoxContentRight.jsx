@@ -46,7 +46,7 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
                 <li key={index} className="mb-2">
                   <Link
                     href={href}
-                    className="text-blue-600 hover:text-blue-800 font-medium flex justify-between"
+                    className="text-blue-600 hover:text-blue-800 font-medium flex "
                   >
                     <span className="font-bold">
                       {item.attributes.type || "N/A"}
