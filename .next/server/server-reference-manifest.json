@@ -19,29 +19,11 @@
     "f252422b9d6c6173a78812f2af45b8816a37916f": {
       "workers": {
         "app/[locale]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
-        "app/[locale]/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!",
         "app/[locale]/mbti-test/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2Fmbti-test%2Fpage.jsx%22%2C%5B%22default%22%2C%22generateMetadata%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
         "app/[locale]/page": "rsc",
-        "app/[locale]/[slug]/page": "rsc",
         "app/[locale]/mbti-test/page": "rsc"
-      }
-    },
-    "4cbefb673e5c28e44af70024477ae4d3d4dfd544": {
-      "workers": {
-        "app/[locale]/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/[locale]/[slug]/page": "rsc"
-      }
-    },
-    "f4d40b6d81afee89bcbcbafa5748fd9e6546ded8": {
-      "workers": {
-        "app/[locale]/[slug]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fapp%2F%5Blocale%5D%2F%5Bslug%5D%2Fpage.jsx%22%2C%5B%22generateMetadata%22%2C%22default%22%5D%5D%2C%5B%22%2FUsers%2Fmacos%2FDesktop%2FOneBe%2Fnhan-dien-nhan-to-website%2Fsrc%2Fcomponents%2Flayouts%2FFooter.jsx%22%2C%5B%22default%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/[locale]/[slug]/page": "rsc"
       }
     },
     "6e2a3d471de3e34308473f239c3d9a9a1c8046a3": {
@@ -62,5 +44,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "KBvlBvQz5xPqiGAgImLE1xYWx+6+eDTnxSWktonGcd0="
+  "encryptionKey": "4kn0jYYYHzTt1ztDLbpvjdLlkpb9QZ9TV/BRiOD6fVc="
 }

@@ -11,11 +11,6 @@
       "static/css/app/[locale]/layout.css",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/[slug]/page.js"
-    ],
     "/[locale]/mbti-test/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

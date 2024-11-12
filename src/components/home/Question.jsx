@@ -108,6 +108,7 @@ const Question = ({ question, button_send, error, locale }) => {
         (item) => answers[item.id] !== undefined && answers[item.id] !== null
       )
     );
+    console.log(answers);
 
     if (!allAnswered) {
       message.warning(error_5);
