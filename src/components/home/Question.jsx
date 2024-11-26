@@ -193,7 +193,7 @@ const Question = ({ question, button_send, error, locale }) => {
                     twoToneColor="#52c41a"
                     style={{ marginRight: "8px" }}
                   />
-                  {key + 1}. {item.question}
+                  {item.question}
                 </Title>
                 <Radio.Group
                   onChange={(e) => handleAnswerChange(item.id, e.target.value)}

@@ -29,7 +29,7 @@ eval("/* __next_internal_client_entry_do_not_use__  cjs */ \nvar J = Object.crea
 
 /* __next_internal_client_entry_do_not_use__  cjs */ 
 const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-module.exports = createProxy("/Users/macos/Desktop/OneBe/nhan-dien-nhan-to-website/node_modules/nextjs-toploader/dist/index.js");
+module.exports = createProxy("D:\\OneBe\\nhan-dien-nhan-to-website\\node_modules\\nextjs-toploader\\dist\\index.js");
  /**
  *
  * NextTopLoader
