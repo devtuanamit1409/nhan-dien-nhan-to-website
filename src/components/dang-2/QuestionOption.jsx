@@ -217,9 +217,9 @@ const QuestionOption = ({ questionData, questionsMain }) => {
           borderRadius: "12px",
         }}
       >
-        <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
+        {/* <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
           {t("content_modal")}
-        </p>
+        </p> */}
         <div style={{ marginBottom: "20px", textAlign: "left" }}>
           <Input
             prefix={<PhoneOutlined style={{ color: "#52c41a" }} />}
@@ -243,7 +243,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
               borderRadius: "8px",
             }}
           />
-          <Input
+          {/* <Input
             prefix={<HomeOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("address")}
             value={address}
@@ -253,8 +253,8 @@ const QuestionOption = ({ questionData, questionsMain }) => {
               padding: "10px",
               borderRadius: "8px",
             }}
-          />
-          <Input
+          /> */}
+          {/* <Input
             prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("position")}
             value={position}
@@ -264,7 +264,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
               padding: "10px",
               borderRadius: "8px",
             }}
-          />
+          /> */}
         </div>
       </Modal>
 

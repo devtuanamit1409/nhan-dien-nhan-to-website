@@ -44,7 +44,7 @@ const Question = ({ question, button_send, error, locale }) => {
     // Retrieve MBTI type from localStorage and ensure MBTI and fields are available
     const mbti = localStorage.getItem("mbti");
     const birthDatePattern = /^\d{2}-\d{2}-\d{4}$/;
-    if (!mbti || !phone || !birthDate || !address || !position) {
+    if (!mbti || !phone || !birthDate) {
       message.error(t("error_submit_5"));
       return;
     }
@@ -59,8 +59,6 @@ const Question = ({ question, button_send, error, locale }) => {
         type: mbti,
         phone,
         birthDate, // Trường này bây giờ là chuỗi văn bản nhập tay
-        address,
-        position,
       },
     };
 
@@ -92,6 +90,8 @@ const Question = ({ question, button_send, error, locale }) => {
       localStorage.removeItem("mbti");
       setIsModalVisible(false);
       setIsResultModalVisible(true);
+
+      window.location.href = `/${locale}/${result.data.attributes.type}`;
     } catch (error) {
       console.error(error);
       message.error(t("error_submit_4"));
@@ -283,9 +283,9 @@ const Question = ({ question, button_send, error, locale }) => {
           borderRadius: "12px",
         }}
       >
-        <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
+        {/* <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
           {t("content_modal")}
-        </p>
+        </p> */}
         <div style={{ marginBottom: "20px", textAlign: "left" }}>
           <Input
             prefix={<PhoneOutlined style={{ color: "#52c41a" }} />}
@@ -309,7 +309,7 @@ const Question = ({ question, button_send, error, locale }) => {
               borderRadius: "8px",
             }}
           />
-          <Input
+          {/* <Input
             prefix={<HomeOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("address")}
             value={address}
@@ -319,8 +319,8 @@ const Question = ({ question, button_send, error, locale }) => {
               padding: "10px",
               borderRadius: "8px",
             }}
-          />
-          <Input
+          /> */}
+          {/* <Input
             prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("position")}
             value={position}
@@ -330,7 +330,7 @@ const Question = ({ question, button_send, error, locale }) => {
               padding: "10px",
               borderRadius: "8px",
             }}
-          />
+          /> */}
         </div>
       </Modal>
 
