@@ -1011,6 +1011,22 @@ p {
     grid-column: span 8 / span 8;
   }
 
+  .md\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+
   .md\:h-56 {
     height: 14rem;
   }
