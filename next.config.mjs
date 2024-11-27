@@ -29,6 +29,11 @@ const nextConfig = {
         hostname: "admin.multiple-choice.syntheos.life",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "admin.nhandientochat.com",
+        pathname: "/uploads/**",
+      },
     ],
   },
 };

@@ -24,6 +24,8 @@ import { useTranslations } from "next-intl";
 const { Title, Text } = Typography;
 
 const Question = ({ question, button_send, error, locale }) => {
+  console.log(locale);
+
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResultModalVisible, setIsResultModalVisible] = useState(false);
   const [phone, setPhone] = useState("");
@@ -89,9 +91,9 @@ const Question = ({ question, button_send, error, locale }) => {
       setResetKey(resetKey + 1);
       localStorage.removeItem("mbti");
       setIsModalVisible(false);
-      setIsResultModalVisible(true);
+      // setIsResultModalVisible(true);
 
-      window.location.href = `/${locale}/${result.data.attributes.type}`;
+      window.location.href = `/${locale}/${result.data.attributes.type.toLowerCase()}`;
     } catch (error) {
       console.error(error);
       message.error(t("error_submit_4"));
@@ -302,35 +304,29 @@ const Question = ({ question, button_send, error, locale }) => {
             prefix={<CalendarOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("birth")}
             value={birthDate}
-            onChange={(e) => setBirthDate(e.target.value)}
+            maxLength={10} // Giới hạn tối đa 10 ký tự
+            onChange={(e) => {
+              const input = e.target.value.replace(/\D/g, ""); // Loại bỏ ký tự không phải số
+              let formattedDate = input;
+
+              if (input.length > 2) {
+                formattedDate = `${input.slice(0, 2)}-${input.slice(2)}`;
+              }
+              if (input.length > 4) {
+                formattedDate = `${input.slice(0, 2)}-${input.slice(
+                  2,
+                  4
+                )}-${input.slice(4)}`;
+              }
+
+              setBirthDate(formattedDate); // Cập nhật giá trị với định dạng đúng
+            }}
             style={{
               marginBottom: "10px",
               padding: "10px",
               borderRadius: "8px",
             }}
           />
-          {/* <Input
-            prefix={<HomeOutlined style={{ color: "#52c41a" }} />}
-            placeholder={t("address")}
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "10px",
-              borderRadius: "8px",
-            }}
-          /> */}
-          {/* <Input
-            prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
-            placeholder={t("position")}
-            value={position}
-            onChange={(e) => setPosition(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "10px",
-              borderRadius: "8px",
-            }}
-          /> */}
         </div>
       </Modal>
 

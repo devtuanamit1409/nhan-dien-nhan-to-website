@@ -13,7 +13,7 @@ import Link from "next/link";
 const { Title, Text } = Typography;
 import { useTranslations } from "next-intl";
 
-const QuestionOption = ({ questionData, questionsMain }) => {
+const QuestionOption = ({ questionData, questionsMain, locale }) => {
   const [selectedOption, setSelectedOption] = useState({});
   const [isInfoModalVisible, setIsInfoModalVisible] = useState(false);
   const [isResultModalVisible, setIsResultModalVisible] = useState(false);
@@ -69,7 +69,7 @@ const QuestionOption = ({ questionData, questionsMain }) => {
   const handleInfoSubmit = async () => {
     const mbti = localStorage.getItem("mbti");
     const birthDatePattern = /^\d{2}-\d{2}-\d{4}$/;
-    if (!mbti || !phone || !birthDate || !address) {
+    if (!mbti || !phone || !birthDate) {
       message.error(t("error_5"));
       return;
     }
@@ -82,8 +82,6 @@ const QuestionOption = ({ questionData, questionsMain }) => {
         type: mbti,
         phone,
         birthDate,
-        address,
-        position,
       },
     };
 
@@ -107,7 +105,8 @@ const QuestionOption = ({ questionData, questionsMain }) => {
       setSelectedOption({});
       localStorage.removeItem("mbti");
       setIsInfoModalVisible(false);
-      setIsResultModalVisible(true);
+      window.location.href = `${locale}/${result.data.attributes.type.toLowerCase()}`;
+      // setIsResultModalVisible(true);
     } catch (error) {
       console.error(error);
       message.error("errpr_8");
@@ -236,35 +235,29 @@ const QuestionOption = ({ questionData, questionsMain }) => {
             prefix={<CalendarOutlined style={{ color: "#52c41a" }} />}
             placeholder={t("birth")}
             value={birthDate}
-            onChange={(e) => setBirthDate(e.target.value)}
+            maxLength={10} // Giới hạn tối đa 10 ký tự
+            onChange={(e) => {
+              const input = e.target.value.replace(/\D/g, ""); // Loại bỏ ký tự không phải số
+              let formattedDate = input;
+
+              if (input.length > 2) {
+                formattedDate = `${input.slice(0, 2)}-${input.slice(2)}`;
+              }
+              if (input.length > 4) {
+                formattedDate = `${input.slice(0, 2)}-${input.slice(
+                  2,
+                  4
+                )}-${input.slice(4)}`;
+              }
+
+              setBirthDate(formattedDate); // Cập nhật giá trị với định dạng đúng
+            }}
             style={{
               marginBottom: "10px",
               padding: "10px",
               borderRadius: "8px",
             }}
           />
-          {/* <Input
-            prefix={<HomeOutlined style={{ color: "#52c41a" }} />}
-            placeholder={t("address")}
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "10px",
-              borderRadius: "8px",
-            }}
-          /> */}
-          {/* <Input
-            prefix={<SolutionOutlined style={{ color: "#52c41a" }} />}
-            placeholder={t("position")}
-            value={position}
-            onChange={(e) => setPosition(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "10px",
-              borderRadius: "8px",
-            }}
-          /> */}
         </div>
       </Modal>
 

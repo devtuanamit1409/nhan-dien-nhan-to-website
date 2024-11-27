@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 
 const middleware = createMiddleware({
   ...routing,
-  defaultLocale: "en",
+  defaultLocale: "vi",
 });
 
 export default function handler(req) {
@@ -13,11 +13,10 @@ export default function handler(req) {
   // Kiểm tra nếu người dùng truy cập vào root URL `/`
   if (pathname === "/") {
     // Tạo URL mới để chuyển hướng đến `/en`
-    const url = new URL(`/en`, req.nextUrl.origin);
+    const url = new URL(`/vi`, req.nextUrl.origin);
 
-    // Cập nhật cookie `NEXT_LOCALE` thành `en`
     const response = NextResponse.redirect(url);
-    response.cookies.set("NEXT_LOCALE", "en", { path: "/" });
+    response.cookies.set("NEXT_LOCALE", "vi", { path: "/" });
     return response;
   }
 
