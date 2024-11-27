@@ -119,7 +119,7 @@ const Home = async ({ params: { locale } }) => {
         <div>
           <BoxContent content={content} />
           <div className="grid grid-cols-12 gap-4">
-            <div className="col-span-12 md:col-span-8">
+            <div className="col-span-12 md:col-span-9">
               <Question
                 button_send={button_send}
                 question={list_50_question}
@@ -130,7 +130,7 @@ const Home = async ({ params: { locale } }) => {
                 dangerouslySetInnerHTML={{ __html: contentEnd }}
               ></div>
             </div>
-            <div className="col-span-12 md:col-span-4">
+            <div className="col-span-12 md:col-span-3">
               <BoxContentRight
                 title={titleBoxRight}
                 list_tinh_cach={list_tinh_cach}

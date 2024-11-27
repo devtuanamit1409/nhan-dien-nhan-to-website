@@ -30,11 +30,11 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
               // Chỉ tạo liên kết nếu slug tồn tại
               if (!slug) {
                 return (
-                  <li key={index} className="mb-2 text-gray-500">
+                  <li key={index} className="mb-2 text-gray-500 ">
                     <span className="font-bold">
-                      {item.attributes.type || "N/A"}
+                      {item.attributes.type || "N/A"} -{" "}
+                      {item.attributes.type_tieng_viet || "N/A"}
                     </span>
-                    <span>{item.attributes.type_tieng_viet || "N/A"}</span>
                   </li>
                 );
               }
@@ -43,15 +43,15 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
               const href = `/${locale}/${slug}`;
 
               return (
-                <li key={index} className="mb-2">
+                <li key={index} className="py-2 border-b">
                   <Link
                     href={href}
                     className="text-blue-600 hover:text-blue-800 font-medium flex "
                   >
                     <span className="font-bold">
-                      {item.attributes.type || "N/A"}
+                      {item.attributes.type || "N/A"} -{" "}
+                      {item.attributes.type_tieng_viet || "N/A"}
                     </span>
-                    <span>{item.attributes.type_tieng_viet || "N/A"}</span>
                   </Link>
                 </li>
               );

@@ -115,7 +115,7 @@ const Page = async ({ params }) => {
     <>
       <main className="container mx-auto px-4 md:px-0 py-10">
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-12 md:col-span-8">
+          <div className="col-span-12 md:col-span-9">
             <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
               <h1 className="text-5xl font-extrabold text-blue-700 mb-4">
                 {type}
@@ -134,7 +134,7 @@ const Page = async ({ params }) => {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 md:col-span-3">
             <BoxContentRight
               title={titleBoxRight}
               list_tinh_cach={list_tinh_cach}
