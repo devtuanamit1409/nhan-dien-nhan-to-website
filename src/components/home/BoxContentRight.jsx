@@ -1,24 +1,14 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
   return (
     <div className="py-0 md:py-8">
       <div className="bg-white shadow-md rounded-md overflow-hidden">
-        {/* Phần hình ảnh và tiêu đề */}
-        <div className="relative">
-          <Image
-            src="/bg2.png"
-            alt={title}
-            width={500}
-            height={200}
-            className="w-full h-40 object-cover"
-          />
-          <div className="absolute top-0 left-0 p-4 bg-white bg-opacity-75 w-full">
-            <h2 className="text-lg font-bold text-gray-900">{title}</h2>
-          </div>
+        {/* Phần tiêu đề với nền xanh nhẹ */}
+        <div className="relative bg-blue-100 p-4">
+          <h2 className="text-lg font-bold text-gray-900">{title}</h2>
         </div>
 
         {/* Phần danh sách */}
@@ -30,7 +20,7 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
               // Chỉ tạo liên kết nếu slug tồn tại
               if (!slug) {
                 return (
-                  <li key={index} className="mb-2 text-gray-500 ">
+                  <li key={index} className="mb-2 text-gray-500">
                     <span className="font-bold">
                       {item.attributes.type || "N/A"} -{" "}
                       {item.attributes.type_tieng_viet || "N/A"}
@@ -46,7 +36,7 @@ const BoxContentRight = ({ title, list_tinh_cach, locale }) => {
                 <li key={index} className="py-2 border-b">
                   <Link
                     href={href}
-                    className="text-blue-600 hover:text-blue-800 font-medium flex "
+                    className="text-blue-600 hover:text-blue-800 font-medium flex"
                   >
                     <span className="font-bold">
                       {item.attributes.type || "N/A"} -{" "}

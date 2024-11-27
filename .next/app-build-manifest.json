@@ -16,6 +16,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/[slug]/page.js"
     ],
+    "/[locale]/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/contact/page.js"
+    ],
+    "/[locale]/lien-he/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/lien-he/page.js"
+    ],
     "/[locale]/50-question-test/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

@@ -17,8 +17,8 @@ const Header = ({ locale }) => {
   const menuItems = [
     { title: t("trac_nghiem_nhanh"), link: "/" },
     { title: t("trac_nghiem_50_cau"), link: "/50-question-test" },
-    { title: t("nhom_tinh_cach"), link: "#footer" },
-    { title: t("lien_he"), link: "/contact" },
+    // { title: t("nhom_tinh_cach"), link: "#footer" },
+    { title: t("lien_he"), link: "/lien-he" },
   ];
 
   return (

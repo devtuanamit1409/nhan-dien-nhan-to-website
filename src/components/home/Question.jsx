@@ -24,7 +24,7 @@ import { useTranslations } from "next-intl";
 const { Title, Text } = Typography;
 
 const Question = ({ question, button_send, error, locale }) => {
-  console.log(locale);
+  const [unansweredQuestions, setUnansweredQuestions] = useState([]);
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isResultModalVisible, setIsResultModalVisible] = useState(false);
@@ -113,8 +113,19 @@ const Question = ({ question, button_send, error, locale }) => {
     console.log(answers);
 
     if (!allAnswered) {
+      const unansweredIds = question.flatMap((section) =>
+        section.attributes.questions
+          .filter(
+            (item) =>
+              answers[item.id] === undefined || answers[item.id] === null
+          )
+          .map((item) => item.id)
+      );
+      setUnansweredQuestions(unansweredIds);
       message.warning(error_5);
       return;
+    } else {
+      setUnansweredQuestions([]); // Clear unanswered questions list when all questions are answered
     }
 
     try {
@@ -186,9 +197,12 @@ const Question = ({ question, button_send, error, locale }) => {
                 <Title
                   level={5}
                   style={{
-                    fontWeight: "600",
-                    color: "#1A1A1A",
+                    // fontWeight: "600",
+                    // color: "#1A1A1A",
                     marginBottom: "15px",
+                    backgroundColor: unansweredQuestions.includes(item.id)
+                      ? "#ff4d4f"
+                      : "#f0f8ff", // Change background color if unanswered
                   }}
                 >
                   <CheckCircleTwoTone

@@ -117,15 +117,12 @@ const Page = async ({ params }) => {
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-9">
             <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
-              <h1 className="text-5xl font-extrabold text-blue-700 mb-4">
-                {type}
+              <h1 className="text-3xl font-extrabold text-blue-700 mb-4">
+                {type} -{" "}
+                <span className="text-3xl font-semibold text-gray-800 mb-6">
+                  {type_tieng_viet}
+                </span>
               </h1>
-              <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                {type_tieng_viet}
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                {describe}
-              </p>
 
               <div
                 className="prose lg:prose-xl max-w-none"

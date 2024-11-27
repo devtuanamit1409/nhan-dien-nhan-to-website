@@ -9,4 +9,5 @@ export const ENDPOINT = {
   GET_ANSWERS: `${BASE_URL}/api/trac-nghiem-50-cau/get-answer-types`,
   THONG_TIN_UNG_VIEN: `${BASE_URL}/api/thong-tin-ung-viens`,
   GET_ANSWERS_TYPE_2: `${BASE_URL}/api/cau-hoi-dang-2/get-answer-types`,
+  GET_LIEN_HE: `${BASE_URL}/api/lien-he`,
 };
